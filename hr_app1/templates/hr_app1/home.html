@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* General styles for body */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* Header styles */
+        h1 {
+            font-size: 3rem;
+            color: #0073e6;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Navigation styles */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        li {
+            width: 100%;
+        }
+
+        /* Link styles */
+        a {
+            display: inline-block;
+            width: 250px;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #fff;
+            background: linear-gradient(135deg, #00bcd4, #0073e6);
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Hover effects */
+        a:hover {
+            background: linear-gradient(135deg, #0073e6, #00bcd4);
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Active state */
+        a:active {
+            transform: scale(0.98);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Disabled link styles (Coming Soon) */
+        a[href="#"] {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        a[href="#"]:hover {
+            background-color: #bbb;
+        }
+
+        /* Responsive design for small screens */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            a {
+                font-size: 1.1rem;
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Interview Portal</h1>
+    <ul>
+        <li><a href="{% url 'ai_interview_options' %}">AI Interview</a></li>
+        <!-- <li><a href="#">HR Manual Interview (Coming Soon)</a></li> -->
+    </ul>
+</body>
+</html>
